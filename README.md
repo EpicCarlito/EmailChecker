@@ -2,6 +2,10 @@
 
 A simple way to check if an email exists
 
+## Warning
+
+Make sure Port 25 is allowed! If the port is blocked, all email checks will return false.
+
 ## Installation
 
     npm i @epiccarlito/emailchecker
@@ -18,18 +22,13 @@ A simple way to check if an email exists
 
 
     async function main() {
-      let result = await checkEmail('e@test.com'); // For TypeScript
+      let result = await checkEmail('e@gmail.com'); // For TypeScript
+      let result = await emailchecker.checkEmail('e@gmail.com'); // For Javascript
     }
 
     main();
 
-    let result = await emailchecker.checkEmail('e@test.com'); // For Javascript
-
-
-## Warning
-
-Make sure Port 25 is allowed! If the port is blocked, all email checks will return false.
 
 ## Original Idea
 
-[email-existance](https://github.com/nmanousos/email-existence), I used the same method of this package checking the codes of MX servers, however, I made it on TypeScript and made it simpler for ease of use!
+[email-existance](https://github.com/nmanousos/email-existence), I used the same method of checking the codes that the MX server responds to. I remade it using TypeScript and made it simpler for ease of use by using async and await rather than callbacks!
