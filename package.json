@@ -1,7 +1,8 @@
 {
   "name": "@epiccarlito/emailchecker",
   "version": "1.0.7",
-  "description": "",
+  "description": "A simple way to check if an email exists",
+  "keywords": [ "typescript", "email", "check", "verify", "validate", "exist" ],
   "main": ".build/index.js",
   "types": "src/index.ts",
   "files": [
