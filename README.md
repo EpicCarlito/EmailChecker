@@ -32,4 +32,4 @@ Make sure Port 25 is allowed! If the port is blocked, all email checks will retu
 
 ## Original Idea
 
-[email-existance](https://github.com/nmanousos/email-existence), I used the same method of checking the codes that the MX server responds back with. which can identify if the email can accept emails. I remade it using TypeScript and made it simpler for ease of use by using async and await rather than callbacks!
+[email-existance](https://github.com/nmanousos/email-existence), I used the same method of checking the codes that the MX server responds back with, which can identify if the email can accept emails and exists. I remade it using TypeScript and made it simpler for ease of use by using async and await rather than callbacks.
