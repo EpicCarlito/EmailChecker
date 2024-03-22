@@ -1,12 +1,16 @@
 {
   "name": "@epiccarlito/emailchecker",
-  "version": "1.0.7",
+  "version": "1.1",
   "description": "A simple way to check if an email exists",
-  "keywords": [ "typescript", "email", "check", "verify", "validate", "exist" ],
-  "main": ".build/index.js",
+  "keywords": [
+    "typescript",
+    "email",
+    "check",
+    "verify",
+    "validate"
+  ],
   "types": "src/index.ts",
   "files": [
-    ".build",
     "src"
   ],
   "scripts": {
@@ -16,7 +20,7 @@
     "type": "git",
     "url": "https://github.com/EpicCarlito/EmailChecker.git"
   },
-  "author": "",
+  "author": "EpicCarlito",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/EpicCarlito/EmailChecker/issues"
@@ -25,6 +29,6 @@
     "@types/node": "^20.4.10"
   },
   "devDependencies": {
-    "typescript": "^5.1.6"
+    "typescript": "^5.4.3"
   }
 }

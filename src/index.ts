@@ -4,11 +4,13 @@ import * as net from 'net';
 
 const emailFormat: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
-export async function checkEmail(email: string): Promise<boolean> {
+export default async function checkEmail(email: string, domain?: string): Promise<boolean> {
   const formatCheck = emailFormat.test(email)
   if (!formatCheck) return false;
   
   const hostname = email.split("@")[1];
+  if (hostname != domain) return false;
+
   try {
     const addresses = await dnsPromises.resolveMx(hostname);
     if (addresses && addresses.length > 0) {

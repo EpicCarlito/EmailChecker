@@ -1,10 +1,7 @@
 # EmailChecker
 
-A simple way to check if an email exists
-
-## Warning
-
-Make sure Port 25 is allowed! If the port is blocked, all email checks will return false.
+A simple way to check if an email exists! You can also check the domain of the email.
+**Warning:** Port 25 must be allowed! (Or email checks return false)
 
 ## Installation
 
@@ -12,24 +9,20 @@ Make sure Port 25 is allowed! If the port is blocked, all email checks will retu
 
 ### TypeScript
 
-    import { checkEmail } from "@epiccarlito/emailchecker"
+    import checkEmail from "@epiccarlito/emailchecker";
 
 ### JavaScript
 
-    const emailchecker = require("@epiccarlito/emailchecker")
-
+    const checkEmail = require("@epiccarlito/emailchecker").default;
+    
 ### Example Code
 
-
     async function main() {
-      let result = await checkEmail('e@gmail.com'); // For TypeScript
-      let result = await emailchecker.checkEmail('e@gmail.com'); // For Javascript
-      console.log(result)
+    	let result = await checkEmail("exampleemail@gmail.com", "gmail.com");
+    	return result;
     }
+    main(); // Returns false
+    
+## Original Concept
 
-    main(); // Prints result which is false
-
-
-## Original Idea
-
-[email-existance](https://github.com/nmanousos/email-existence), I used the same method of checking the codes that the MX server responds back with, which can identify if the email can accept emails and exists. I remade it using TypeScript and made it simpler for ease of use by using async and await rather than callbacks.
+Inspired by [email-existance](https://github.com/nmanousos/email-existence). Both packages check the codes of the MX server to identify if an email address accepts emails and exists.
