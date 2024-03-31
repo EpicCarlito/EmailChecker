@@ -35,7 +35,7 @@ async function checkEmail(email, domain) {
     if (!formatCheck)
         return false;
     const hostname = email.split("@")[1];
-    if (hostname != domain)
+    if (domain && hostname != domain)
         return false;
     try {
         const addresses = await dnsPromises.resolveMx(hostname);

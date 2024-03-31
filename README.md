@@ -1,6 +1,6 @@
 # EmailChecker
 
-A simple way to check if an email exists! You can also check the domain of the email.
+A simple way to check if an email exists! You can also check the domain of the email with the second parameter.
 **Warning:** Port 25 must be allowed! (Or email checks return false)
 
 ## Installation
@@ -25,4 +25,4 @@ A simple way to check if an email exists! You can also check the domain of the e
     
 ## Original Concept
 
-Inspired by [email-existance](https://github.com/nmanousos/email-existence). Both packages check the codes of the MX server to identify if an email address accepts emails and exists.
+Inspired by [email-existence](https://github.com/nmanousos/email-existence). Both packages check the codes of the MX server to identify if an email address accepts emails and exists.

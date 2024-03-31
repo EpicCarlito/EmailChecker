@@ -3,7 +3,7 @@
       "target": "ESNext",
       "module": "commonjs",
       "declaration": true,
-      "outDir": "build",
+      "outDir": "build/cjs",
       "strict": true,
       "esModuleInterop": true,
       "skipLibCheck": true,

@@ -9,7 +9,7 @@ export default async function checkEmail(email: string, domain?: string): Promis
   if (!formatCheck) return false;
   
   const hostname = email.split("@")[1];
-  if (hostname != domain) return false;
+  if (domain && hostname != domain) return false;
 
   try {
     const addresses = await dnsPromises.resolveMx(hostname);
