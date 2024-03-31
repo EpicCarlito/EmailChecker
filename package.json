@@ -9,11 +9,15 @@
     "verify",
     "validate"
   ],
-  "main": ".build/index.js",
-  "types": ".build/index.d.ts",
-  "scripts": {
-    "prepublish": "tsc"
+  "type": "module",
+  "exports": {
+     "require": "./build/cjs/index.js",
+     "import": "./build/esm/index.js"
   },
+  "main": "./build/esm/index.js",
+  "scripts": {
+    "build": "tsc --module commonjs --outDir build/cjs && tsc --module es2022 --outDir build/esm"
+   },
   "repository": {
     "type": "git",
     "url": "https://github.com/EpicCarlito/EmailChecker.git"
