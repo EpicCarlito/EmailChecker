@@ -9,11 +9,11 @@ A simple way to check if an email exists! You can also check the domain of the e
 
 ### TypeScript
 
-    import checkEmail from "@epiccarlito/emailchecker";
+    import { checkEmail } from "@epiccarlito/emailchecker";
 
 ### JavaScript
 
-    const checkEmail = require("@epiccarlito/emailchecker").default;
+    const { checkEmail } = require("@epiccarlito/emailchecker");
     
 ### Example Code
 

@@ -1,6 +1,6 @@
 {
   "name": "@epiccarlito/emailchecker",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A simple way to check if an email exists",
   "keywords": [
     "typescript",
@@ -9,20 +9,12 @@
     "verify",
     "validate"
   ],
-  "exports": {
-    "require": {
-      "types": "./build/cjs/index.d.ts",
-      "default": "./build/cjs/index.js"
-    },
-    "import": {
-      "types": "./build/esm/index.d.ts",
-      "default": "./build/esm/index.js"
-    }
-  },
-  "main": "./build/esm/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc && tsc --module es2022 --outDir build/esm"
-   },
+    "build": "tsup"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/EpicCarlito/EmailChecker.git"
@@ -33,9 +25,10 @@
     "url": "https://github.com/EpicCarlito/EmailChecker/issues"
   },
   "dependencies": {
-    "@types/node": "^20.4.10"
+    "@types/node": "^20.12.2"
   },
   "devDependencies": {
+    "tsup": "^8.0.2",
     "typescript": "^5.4.3"
   }
 }
